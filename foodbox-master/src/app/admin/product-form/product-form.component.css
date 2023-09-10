@@ -1,0 +1,12 @@
+#page
+{
+    margin-top: 1%;
+    align-content: center;
+    position: relative;
+    left: 17px;
+    top: 20px;
+}
+label
+{
+    font-weight: bold;
+}

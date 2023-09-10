@@ -1,0 +1,20 @@
+<div class="container" style="background-color: rgba(241, 239, 79, 0.938);">
+    <div class="row" id="searchbar" style="background-color: rgba(255, 251, 14, 0.938);">
+      <div class="search-hero">
+        <p class="lead" style=" font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight: bold;font-size: x-large;" >Search the Product you want..</p>
+        <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" aria-label="Search ..." placeholder="Search for products...">        
+      </div>
+      <br>
+      <div class="card mt-20" style="width: 25rem;" *ngFor = "let p of products1 let i = index">
+        <img class="card-img-top" [src] = 'p.productImg' alt="the  image cap" width="150">
+        <div class="card-body">
+          <h5 id="pid">{{p.productId}}</h5>
+          <h5 class="card-title" id="pname">{{p.productName}}</h5>
+          <p class="card-text" id="pcat">{{p.productCat}}</p>
+          <p class="card-text" id="pprice">{{p.productPrice | currency:'$'}}</p>
+          <a class="btn btn-outline-light mr-4" (click) = "getvalues(i)">Add to Cart</a>
+      </div>
+      </div>
+
+    </div>
+  </div>

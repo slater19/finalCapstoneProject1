@@ -1,0 +1,82 @@
+<div id="page">
+    <p class = "display-4 lead" style="font-family: Hey October;">Add Product</p>            
+<div class="row"> 
+    <div class="col-md-6">
+        <form novalidate (ngSubmit) = "save(regForm)" #regForm = "ngForm">
+            <div class="form-group"> 
+                <label for="productId" class="lead" style="font-family: Hey October;">Product-Id:</label>&nbsp;
+                <input [(ngModel)] = productform.productId #productIdVar = "ngModel" name="productId" id = "productId" type="number" class="form-control" required
+                [ngClass] = "{'is-invalid' : (productIdVar.touched || productIdVar.dirty) && !productIdVar.valid}"/>
+                <!--Errors Checking-->
+                <span class="invalid-feedback">
+                    <span *ngIf = productIdVar.errors>
+                        Product-Id is required. 
+                    </span>
+                </span>
+                    
+            </div>
+            <div class="form-group"> 
+                <label for="title" class="lead" style="font-family: Hey October;"><Br>Title:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input [(ngModel)] = productform.productTitle #productTitleVar = "ngModel" name="title"  id = "title" type="text" minlength="4" class="form-control" required
+                [ngClass] = "{'is-invalid' : (productTitleVar.touched || productTitleVar.dirty) && !productTitleVar.valid}"/>
+                <span class="invalid-feedback">
+                    <span *ngIf = productTitleVar.errors>
+                        Product-Title is required. 
+                    </span>
+                    <span *ngIf = productTitleVar.errors>
+                        Product-Title should be atleast 4 characters long.
+                    </span>
+                </span>
+            </div>
+            <div class="form-group"> 
+                <label for="price" class="lead" style="font-family: Hey October;"><Br>Price:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input [(ngModel)] = productform.productPrice #productPriceVar = "ngModel" name="price" id = "price" type="number" class="form-control" required
+                [ngClass] = "{'is-invalid' : (productPriceVar.touched || productPriceVar.dirty) && !productPriceVar.valid}"/>
+                <!--Errors Checking-->
+                <span class="invalid-feedback">
+                    <span *ngIf = productPriceVar.errors>
+                        Product-Price is required. 
+                    </span>
+                </span>
+                    
+            </div>
+            <div class="form-group"> 
+                <label for="category" class="lead"style="font-family: Hey October;"><Br>Category:</label>&nbsp;&nbsp;&nbsp;
+                <select [(ngModel)] = productform.productCat #productCatVar = "ngModel" name="category" id = "category" class="form-control" aria-placeholder="" required
+                    [ngClass] = "{'is-invalid' : (productCatVar.touched || productCatVar.dirty) && !productCatVar.valid}">
+                <!--Errors Checking-->
+                <span class="invalid-feedback">
+                    <span *ngIf = productCatVar.errors>
+                        Product-Category has to be  selected. 
+                    </span>
+                </span>
+                    
+                    <option value="Choose an option">Choose option</option>
+                    <option value="Butter Tofu" >Indian</option>
+                    <option value="Steamed Mince Burger"> Chinese</option>
+                    <option value="Fried Rice">Chinese</option>
+                    <option value="Paneer Pizza">Italian</option>
+                    <option value="Red Sause Pasta">Italian</option>
+                    
+                </select>
+            </div>
+            <div class="form-group"> 
+                <label for="imageurl" class="lead" style="font-family: Hey October;"><Br>Image Url:</label>&nbsp;&nbsp;
+                <input [(ngModel)] = productform.productImg #productImgVar = "ngModel" name = "imageUrl" id = "imageurl" type="text" class="form-control" required
+                [ngClass] = "{'is-invalid' : (productImgVar.touched || productImgVar.dirty) && !productImgVar.valid}">
+                <!--Errors Checking-->
+                <span class="invalid-feedback">
+                    <span *ngIf = productImgVar.errors>
+                        Product-Image is required.
+                    </span>
+                </span>
+            </div>
+            <Br>
+            <input type="submit" value="Add Product" name="submit" class="btn btn-success mr-2" [disabled] = '!regForm.valid'>&nbsp;
+            <button type="submit" class="btn btn-success" routerLink = "/admin-page"  >Go Back</button> 
+        </form>
+        
+    </div>
+   
+</div>
+</div>

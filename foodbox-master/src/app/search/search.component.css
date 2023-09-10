@@ -1,0 +1,21 @@
+.form-control
+{
+    width: 970px;
+    
+}
+.card
+{
+    margin-bottom: 25px;
+    margin-left: 37px;
+    padding: 0.5px;
+}
+.card-img-top:hover
+{
+    transform: scale(0.5.1);
+}
+#searchbar
+{
+    
+    position: relative;
+    top: 3px;
+}

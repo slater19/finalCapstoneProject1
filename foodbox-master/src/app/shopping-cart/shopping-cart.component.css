@@ -1,0 +1,77 @@
+#page
+{
+    margin-top: 0.2%;
+    background-color: rgb(255, 255, 255);
+}
+.card {
+    border: none;
+    max-width: 450px;
+    border-radius: 15px;
+    margin: 150px 0 150px;
+    padding: 35px;
+    padding-bottom: 10px !important
+}
+
+.heading {
+    color: #000000;
+    font-size: 24px;
+    font-weight: 500
+}
+
+#img {
+    transform: translate(160px, -10px)
+}
+
+#img:hover {
+    cursor: pointer
+}
+
+.text-warning {
+    font-size: 18px;
+    font-weight: 400;
+    color: #130e02 !important
+}
+
+#cno {
+    transform: translateY(-10px)
+}
+
+#input {
+    border-bottom: 1.5px solid #ffffff !important;
+    font-weight: bold;
+    border-radius: 0;
+    border: 0
+}
+
+.form-group input:focus {
+    border: 0;
+    outline: 0
+}
+
+.col-sm-5 {
+    padding-left: 90px;
+
+}
+
+.btn {
+    background: #bebdba !important;
+    border: none;
+    border-radius: 30px
+}
+
+.btn:focus {
+    box-shadow: none
+}
+#paytm
+{
+    position: relative;
+    top: -230px;
+    left: 340px;
+    float: left;
+}
+#proceed{
+    position: relative;
+    left: 100px;
+    top: -70px;
+    width: 160px;
+}

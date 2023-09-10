@@ -1,0 +1,28 @@
+<div id="page">
+    <h5 style="font-size: 25px; font-family:Verdana, Geneva, Tahoma, sans-serif;">Click on Add Product Button to add new Products </h5><br>
+    <p>    
+        <a class="btn btn-outline-light mr-2" routerLink="/admin/products/new">Add Product</a>&nbsp;
+        <button class="btn btn-outline-light my-2 my-sm-0 mr-auto" routerLink = "/admin-page">Go Back</button>
+    </p>
+    
+    <h5 style="font-size: 30px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Store Inventory  </h5>
+    <table class="table table-bordered  table-hover " style="font-weight: bold;background-color: rgb(137, 181, 238) ;">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Delete Product</th>
+            </tr>
+        </thead>
+        <tbody *ngFor = "let p of products1">
+            <tr>
+                <td>{{p.productName}}</td>
+                <td>{{p.productPrice}}</td>
+                <td> <button class="btn btn-danger my-2 my-sm-0 mr-auto" routerLink = "/product" (click) = "onDelete(p.productId)">Delete</button></td>
+            </tr>
+            
+        </tbody>
+    </table>
+    <Br>
+    <button class="btn btn-outline-light my-2 my-sm-0 mr-auto" routerLink = "/admin-page">Go Back</button>
+    </div>

@@ -1,0 +1,51 @@
+<div id="page">    
+    <section id="cart" class="py-3">                    
+                <div class="row">                   
+                            <div class="row  py-3 mt-3">
+                                
+                                    <div class=" text-center mt-2">
+                                        <h6 class="text-dark py-3" style="position: relative;top: 20px; left:500px;font-size:xx-large;">Order Placed Successfully</h6> 
+                                        <hr style="position: relative;top: 20px; left:500px; "> 
+                                    <table cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
+                                        <tr>
+                                            <td  style="position: relative;top: 20px; left:500px;font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding-top: 25px;"> <img src="https://img.icons8.com/carbon-copy/100/000000/checked-checkbox.png" width="125" height="120" style="display: block; border: 0px;" /><br>
+                                                    <h2 style="font-size: 30px; font-weight: 800; line-height: 36px; color:darkgreen; margin: 0;"> Thank You For Your FoodBox Order! <br> Your Order Details are </h2>
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td style="position: relative;top: 20px; left:500px;"   >
+                                                <div class="row border-top py-3 mt-3" *ngFor = "let p of cartproducts" style="border: 1px solid rgb(105, 99, 99);">
+                                                    
+                                                    <div class="col-sm-8">
+                                                        <h5 class="font-baloo font-size-20">{{p.productName}}</h5>                                    
+                                                       
+                                                    </div>
+                    
+                                                    <div class="col-sm-2 text-right">
+                                                        <div class="font-size-20 text-danger font-baloo">
+                                                            <span class="product_price">{{p.productPrice | currency:'$'}} </span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </td><br>
+                                        </tr>
+                                        <tr>
+                                            <td  style="padding: 25px 0 15px 0;background-color: rgb(82, 172, 82);position: relative;top: 20px; left:500px;font-size:xx-large;">
+                                                <table cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td  style="border-radius: 5px;font-size: 24px; font-weight: 800; line-height: 30px; color: #ffffff; margin: 0;" >Get 10% off on your next order.<br> <br><button class="btn btn-danger" routerLink = "/product" style="font-size: 18px;  color: #ffffff; text-decoration: none; border-radius: 5px; background-color: #F44336; padding: 15px 30px; border: 1px solid #F44336; display: block;">Shop Again</button> </td>
+                                                        <td  style="border-radius: 5px;font-size: 24px; font-weight: 800; line-height: 30px; color: #ffffff; margin: 0;" >Refer your Friends for an additional 10% Discount<br> <br>
+                                                        
+                                                    </tr>
+                                                </table>
+
+                                                
+                                            </td>
+                                        </tr>
+                                    </table>                                      
+                                    </div>                                
+                            </div>                                                                          
+                </div>        
+    </section>

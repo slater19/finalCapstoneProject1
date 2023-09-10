@@ -1,0 +1,33 @@
+<div id="page">
+    <br><br><br>
+<form class="container col-md-6 mt-5" novalidate (ngSubmit) = "save(regForm)" #regForm = "ngForm">
+    <p class = "display-4 lead" style="font-family: Hey October;">User Login</p>            
+      <div class="form-group"> 
+        <label for="emailId" class="lead" style="font-family: Hey October;">Enter Email-id :   &nbsp;</label>
+        <input [(ngModel)] = userlog.emailId #EmailIdVar = "ngModel" name="emailId"  id = "emailId" type="text"  class="form-control" required
+        [ngClass] = "{'is-invalid' : (EmailIdVar.touched || EmailIdVar.dirty) && !EmailIdVar.valid}" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$"/>
+        <span class="invalid-feedback">
+            <span *ngIf = EmailIdVar.errors>
+                Email-id required. 
+            </span>
+            <br><br>
+            <span *ngIf = EmailIdVar.errors>
+                Enter a valid email.
+            </span>
+        </span>
+    </div>    
+      <div class="form-group"> 
+        <label for="password" class="lead" style="font-family: Hey October;">Enter Password : </label>
+        <input [(ngModel)] = userlog.password #passwordVar = "ngModel" name="password"  id="password" type="password" minlength="8" class="form-control" required
+        [ngClass] = "{'is-invalid' : (passwordVar.touched || passwordVar.dirty) && !passwordVar.valid}" />
+        <span class="invalid-feedback">
+            <span *ngIf = passwordVar.errors>
+            Password required. 
+            </span>                
+        </span>
+        <br><br>
+    </div>
+      <button type="submit" class="btn btn-success"  [disabled] = '!regForm.valid' (click) = "Gotopage(regForm)" >Login</button>            
+  </form>
+
+</div>
